@@ -4,6 +4,8 @@ import { VIEWPORT_PROPS } from '@/lib/constants';
 import { CityImage } from '@/lib/types';
 import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
+import ImageLightboxModal from './ImageLightboxModal';
 
 type ImageCarouselProps = {
   title: string;
@@ -12,6 +14,7 @@ type ImageCarouselProps = {
 
 export default function ImageCarousel({ title, images }: ImageCarouselProps) {
   const reduceMotion = useReducedMotion();
+  const [selectedImage, setSelectedImage] = useState<CityImage | null>(null);
 
   return (
     <motion.div
@@ -31,7 +34,12 @@ export default function ImageCarousel({ title, images }: ImageCarouselProps) {
             whileTap={reduceMotion ? undefined : { scale: 0.99 }}
           >
             <div className="relative aspect-[4/3]">
-              <a href={image.src} target="_blank" rel="noreferrer" aria-label={`Abrir imagen completa: ${image.alt}`}>
+              <button
+                type="button"
+                onClick={() => setSelectedImage(image)}
+                aria-label={`Ampliar imagen: ${image.alt}`}
+                className="block h-full w-full cursor-zoom-in bg-transparent text-left"
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -47,7 +55,7 @@ export default function ImageCarousel({ title, images }: ImageCarouselProps) {
                     }
                   }}
                 />
-              </a>
+              </button>
             </div>
             <figcaption className="px-3 py-2 text-xs text-slate-600">{image.alt}</figcaption>
           </motion.figure>
@@ -64,6 +72,7 @@ export default function ImageCarousel({ title, images }: ImageCarouselProps) {
           </span>
         ))}
       </p>
+      <ImageLightboxModal image={selectedImage} onClose={() => setSelectedImage(null)} />
     </motion.div>
   );
 }

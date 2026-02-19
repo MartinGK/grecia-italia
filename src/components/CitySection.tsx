@@ -12,6 +12,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import ImageCarousel from './ImageCarousel';
+import ImageLightboxModal from './ImageLightboxModal';
 import MapsLink from './MapsLink';
 import MasonryGrid from './MasonryGrid';
 
@@ -29,6 +30,7 @@ const withFallbackImage = (image: CityImage, citySlug: string, placeId: string):
 export default function CitySection({ city, activeCategory }: CitySectionProps) {
   const reduceMotion = useReducedMotion();
   const [resolvedPlaceImages, setResolvedPlaceImages] = useState<Record<string, CityImage>>({});
+  const [selectedImage, setSelectedImage] = useState<CityImage | null>(null);
 
   const allItems = useMemo(
     () => [...city.sections.imperdibles, ...city.sections.dayTrips, ...city.sections.comer, ...city.sections.noche],
@@ -143,12 +145,11 @@ export default function CitySection({ city, activeCategory }: CitySectionProps) 
         >
           <div className="mb-1 flex items-start gap-3">
           <div className="relative mt-0.5 h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-slate-200">
-            <a
-              href={thumb.src}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Abrir imagen completa de ${it.name}`}
-              className="absolute inset-0 z-10"
+            <button
+              type="button"
+              onClick={() => setSelectedImage(thumb)}
+              aria-label={`Ampliar imagen de ${it.name}`}
+              className="absolute inset-0 z-10 cursor-zoom-in bg-transparent"
             />
             <Image
               src={thumb.src}
@@ -196,7 +197,7 @@ export default function CitySection({ city, activeCategory }: CitySectionProps) 
         </div>
         <div className="relative aspect-[7/4] overflow-hidden rounded-2xl sm:aspect-[9/4]">
           {heroImage ? (
-            <a href={heroImage.src} target="_blank" rel="noreferrer" aria-label={`Abrir imagen completa de ${city.name}`}>
+            <>
               <Image
                 src={heroImage.src}
                 alt={heroImage.alt}
@@ -212,7 +213,13 @@ export default function CitySection({ city, activeCategory }: CitySectionProps) 
                   }
                 }}
               />
-            </a>
+              <button
+                type="button"
+                onClick={() => setSelectedImage(heroImage)}
+                aria-label={`Ampliar imagen de ${city.name}`}
+                className="absolute inset-0 z-10 cursor-zoom-in bg-transparent"
+              />
+            </>
           ) : (
             <div className="h-full w-full bg-gradient-to-br from-[#336cce] via-[#4149c3] to-slate-700" />
           )}
@@ -272,6 +279,8 @@ export default function CitySection({ city, activeCategory }: CitySectionProps) 
         <ImageCarousel title="Carrusel de ciudad" images={carouselImages} />
         <MasonryGrid title="Mosaico visual" images={masonryImages} />
       </div>
+
+      <ImageLightboxModal image={selectedImage} onClose={() => setSelectedImage(null)} />
     </motion.article>
   );
 }

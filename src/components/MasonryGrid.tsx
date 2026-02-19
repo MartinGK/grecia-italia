@@ -4,6 +4,8 @@ import { VIEWPORT_PROPS } from '@/lib/constants';
 import { CityImage } from '@/lib/types';
 import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
+import ImageLightboxModal from './ImageLightboxModal';
 
 type MasonryGridProps = {
   title: string;
@@ -12,6 +14,7 @@ type MasonryGridProps = {
 
 export default function MasonryGrid({ title, images }: MasonryGridProps) {
   const reduceMotion = useReducedMotion();
+  const [selectedImage, setSelectedImage] = useState<CityImage | null>(null);
 
   return (
     <motion.div
@@ -34,7 +37,12 @@ export default function MasonryGrid({ title, images }: MasonryGridProps) {
             transition={{ duration: 0.35, delay: reduceMotion ? 0 : idx * 0.03 }}
           >
             <div className="relative aspect-[3/4] w-full">
-              <a href={image.src} target="_blank" rel="noreferrer" aria-label={`Abrir imagen completa: ${image.alt}`}>
+              <button
+                type="button"
+                onClick={() => setSelectedImage(image)}
+                aria-label={`Ampliar imagen: ${image.alt}`}
+                className="block h-full w-full cursor-zoom-in bg-transparent text-left"
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -50,7 +58,7 @@ export default function MasonryGrid({ title, images }: MasonryGridProps) {
                     }
                   }}
                 />
-              </a>
+              </button>
             </div>
           </motion.figure>
         ))}
@@ -67,6 +75,7 @@ export default function MasonryGrid({ title, images }: MasonryGridProps) {
           </span>
         ))}
       </p>
+      <ImageLightboxModal image={selectedImage} onClose={() => setSelectedImage(null)} />
     </motion.div>
   );
 }
