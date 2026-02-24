@@ -35,14 +35,14 @@
         "availability": "full_day",
         "blocks": [
           {
-            "title": "Acrópolis (entrada temprana)",
+            "title": "Acrópolis (mañana, entrada temprana)",
             "category": "imperdible",
             "duration": "2h",
             "effortLevel": "medium",
             "requiresTickets": true,
             "visualImpactScore": 5,
             "walkable": true,
-            "mapQuery": "Acrópolis (entrada temprana) Atenas"
+            "mapQuery": "Acrópolis (mañana, entrada temprana) Atenas"
           },
           {
             "title": "Museo de la Acrópolis",
@@ -317,24 +317,24 @@
         "availability": "full_day",
         "blocks": [
           {
-            "title": "Duomo + Cúpula",
-            "category": "imperdible",
+            "title": "Galería Uffizi (mañana)",
+            "category": "muy_recomendado",
             "duration": "2h",
-            "effortLevel": "medium",
+            "effortLevel": "low",
             "requiresTickets": true,
-            "visualImpactScore": 5,
+            "visualImpactScore": 4,
             "walkable": true,
-            "mapQuery": "Duomo + Cúpula Florencia"
+            "mapQuery": "Galería Uffizi (mañana) Florencia"
           },
           {
-            "title": "Piazzale Michelangelo (sunset)",
-            "category": "imperdible",
-            "duration": "1.5h",
+            "title": "Galería de la Academia (tarde)",
+            "category": "muy_recomendado",
+            "duration": "2h",
             "effortLevel": "low",
-            "requiresTickets": false,
-            "visualImpactScore": 5,
-            "walkable": false,
-            "mapQuery": "Piazzale Michelangelo (sunset) Florencia"
+            "requiresTickets": true,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Galería de la Academia (tarde) Florencia"
           }
         ]
       },
@@ -343,14 +343,14 @@
         "availability": "full_day",
         "blocks": [
           {
-            "title": "Galería Uffizi",
-            "category": "muy_recomendado",
-            "duration": "2h",
+            "title": "Ponte Vecchio + Piazza della Signoria + Duomo exterior",
+            "category": "imperdible",
+            "duration": "2.5h",
             "effortLevel": "low",
-            "requiresTickets": true,
-            "visualImpactScore": 4,
+            "requiresTickets": false,
+            "visualImpactScore": 5,
             "walkable": true,
-            "mapQuery": "Galería Uffizi Florencia"
+            "mapQuery": "Ponte Vecchio + Piazza della Signoria + Duomo exterior Florencia"
           },
           {
             "title": "Barrio Oltrarno (tarde libre)",
@@ -361,6 +361,16 @@
             "visualImpactScore": 4,
             "walkable": true,
             "mapQuery": "Barrio Oltrarno (tarde libre) Florencia"
+          },
+          {
+            "title": "Jardines de Boboli",
+            "category": "muy_recomendado",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Giardino di Boboli Florence"
           }
         ]
       },
@@ -481,6 +491,16 @@
             "visualImpactScore": 2,
             "walkable": false,
             "mapQuery": "Traslado Amalfi → Roma Amalfi"
+          },
+          {
+            "title": "Museos Vaticanos + Capilla Sixtina (16:00)",
+            "category": "imperdible",
+            "duration": "3h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Museos Vaticanos + Capilla Sixtina 16:00 Roma"
           }
         ]
       }
@@ -511,16 +531,6 @@
         "dateLabel": "24 abril",
         "availability": "full_day",
         "blocks": [
-          {
-            "title": "Museos Vaticanos + Capilla Sixtina",
-            "category": "imperdible",
-            "duration": "3h",
-            "effortLevel": "medium",
-            "requiresTickets": true,
-            "visualImpactScore": 5,
-            "walkable": true,
-            "mapQuery": "Museos Vaticanos + Capilla Sixtina Roma"
-          },
           {
             "title": "Trastevere (cierre del viaje)",
             "category": "experiencia_local",
