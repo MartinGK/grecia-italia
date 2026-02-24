@@ -2,6 +2,7 @@
 
 import CategoryFilter from '@/components/CategoryFilter';
 import CountrySection from '@/components/CountrySection';
+import DailyPlannerView from '@/components/daily/DailyPlannerView';
 import Hero from '@/components/Hero';
 import MapModeModal from '@/components/MapModeModal';
 import StickyNav from '@/components/StickyNav';
@@ -13,6 +14,7 @@ import { useMemo, useState } from 'react';
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [mapModeOpen, setMapModeOpen] = useState(false);
+  const [activeView, setActiveView] = useState<'classic' | 'daily'>('classic');
   const mapEntries = useMemo(() => getAllMapLinks(), []);
 
   return (
@@ -26,23 +28,56 @@ export default function HomePage() {
       />
 
       <section className="section-shell pb-6">
-        <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
-          <CategoryFilter activeCategory={activeCategory} onChange={setActiveCategory} />
+        <div className="mb-4 flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setMapModeOpen(true)}
-            className="travel-button h-fit border border-slate-900 bg-slate-900 px-5 py-3 text-white hover:bg-slate-800"
+            onClick={() => setActiveView('classic')}
+            className={`travel-button rounded-xl border px-4 py-2 ${
+              activeView === 'classic'
+                ? 'border-slate-900 bg-slate-900 text-white'
+                : 'border-slate-300 bg-white/90 text-slate-700 hover:border-slate-400'
+            }`}
           >
-            Mapa general
+            Vista país/ciudad
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveView('daily')}
+            className={`travel-button rounded-xl border px-4 py-2 ${
+              activeView === 'daily'
+                ? 'border-slate-900 bg-slate-900 text-white'
+                : 'border-slate-300 bg-white/90 text-slate-700 hover:border-slate-400'
+            }`}
+          >
+            Plan diario
           </button>
         </div>
+
+        {activeView === 'classic' ? (
+          <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
+            <CategoryFilter activeCategory={activeCategory} onChange={setActiveCategory} />
+            <button
+              type="button"
+              onClick={() => setMapModeOpen(true)}
+              className="travel-button h-fit border border-slate-900 bg-slate-900 px-5 py-3 text-white hover:bg-slate-800"
+            >
+              Mapa general
+            </button>
+          </div>
+        ) : null}
       </section>
 
-      <Timeline items={itineraryData.timeline} />
+      {activeView === 'classic' ? (
+        <>
+          <Timeline items={itineraryData.timeline} />
 
-      {itineraryData.countries.map((country) => (
-        <CountrySection key={country.slug} country={country} activeCategory={activeCategory} />
-      ))}
+          {itineraryData.countries.map((country) => (
+            <CountrySection key={country.slug} country={country} activeCategory={activeCategory} />
+          ))}
+        </>
+      ) : (
+        <DailyPlannerView />
+      )}
 
       <section id="logistica" className="section-shell">
         <div className="glass-card p-5 sm:p-7">

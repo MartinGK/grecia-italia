@@ -73,3 +73,39 @@ export type ItineraryData = {
     checklist: string[];
   };
 };
+
+export type DailyAvailability = 'full_day' | 'afternoon_only';
+export type EnergyLevel = 'high' | 'medium' | 'low';
+export type ArrivalType = DailyAvailability | 'late_arrival';
+export type BlockCategory =
+  | 'imperdible'
+  | 'muy_recomendado'
+  | 'exploracion'
+  | 'experiencia_local'
+  | 'logistica_critica';
+
+export type DailyBlock = {
+  title: string;
+  category: BlockCategory;
+  duration: string;
+  effortLevel: EnergyLevel;
+  requiresTickets: boolean;
+  visualImpactScore: 1 | 2 | 3 | 4 | 5;
+  walkable: boolean;
+  mapQuery: string;
+};
+
+export type DailyPlanDay = {
+  dateLabel: string;
+  availability: DailyAvailability;
+  blocks: DailyBlock[];
+};
+
+export type DestinationPlan = {
+  destination: string;
+  arrivalType: ArrivalType;
+  energyLevel: EnergyLevel;
+  days: DailyPlanDay[];
+};
+
+export type DailyItineraryData = DestinationPlan[];

@@ -1,0 +1,538 @@
+[
+  {
+    "destination": "Atenas",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "2 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Check-in + paseo Plaka → Anafiotika → Monastiraki",
+            "category": "exploracion",
+            "duration": "2-3h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Check-in + paseo Plaka → Anafiotika → Monastiraki Atenas"
+          },
+          {
+            "title": "Mirador Areopagus / Filopappou al atardecer",
+            "category": "imperdible",
+            "duration": "1h",
+            "effortLevel": "medium",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Mirador Areopagus / Filopappou al atardecer Atenas"
+          }
+        ]
+      },
+      {
+        "dateLabel": "3 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Acrópolis (entrada temprana)",
+            "category": "imperdible",
+            "duration": "2h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Acrópolis (entrada temprana) Atenas"
+          },
+          {
+            "title": "Museo de la Acrópolis",
+            "category": "muy_recomendado",
+            "duration": "1.5h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Museo de la Acrópolis Atenas"
+          },
+          {
+            "title": "Ágora Antigua + Templo de Hefesto",
+            "category": "muy_recomendado",
+            "duration": "1.5h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Ágora Antigua + Templo de Hefesto Atenas"
+          }
+        ]
+      },
+      {
+        "dateLabel": "4 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Cambio de guardia + Jardín Nacional",
+            "category": "exploracion",
+            "duration": "1.5h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 3,
+            "walkable": true,
+            "mapQuery": "Cambio de guardia + Jardín Nacional Atenas"
+          },
+          {
+            "title": "Cabo Sunión (Templo de Poseidón al atardecer)",
+            "category": "imperdible",
+            "duration": "4h",
+            "effortLevel": "medium",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": false,
+            "mapQuery": "Cabo Sunión (Templo de Poseidón al atardecer) Atenas"
+          }
+        ]
+      },
+      {
+        "dateLabel": "5 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Traslado Ferry Pireo → Míkonos",
+            "category": "logistica_critica",
+            "duration": "3h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 3,
+            "walkable": false,
+            "mapQuery": "Traslado Ferry Pireo → Míkonos Atenas"
+          },
+          {
+            "title": "Paseo nocturno por Chora",
+            "category": "exploracion",
+            "duration": "1.5h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Paseo nocturno por Chora Atenas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Míkonos",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "6 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Molinos + Little Venice (mañana)",
+            "category": "imperdible",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Molinos + Little Venice (mañana) Míkonos"
+          },
+          {
+            "title": "Playa Ornos / Platis Gialos",
+            "category": "muy_recomendado",
+            "duration": "3h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 4,
+            "walkable": false,
+            "mapQuery": "Playa Ornos / Platis Gialos Míkonos"
+          }
+        ]
+      },
+      {
+        "dateLabel": "7 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Ferry Míkonos → Santorini",
+            "category": "logistica_critica",
+            "duration": "3h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 3,
+            "walkable": false,
+            "mapQuery": "Ferry Míkonos → Santorini Míkonos"
+          },
+          {
+            "title": "Primer paseo por Fira",
+            "category": "exploracion",
+            "duration": "1.5h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Primer paseo por Fira Míkonos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Santorini",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "high",
+    "days": [
+      {
+        "dateLabel": "8 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Hike Fira → Oia",
+            "category": "imperdible",
+            "duration": "4h",
+            "effortLevel": "high",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Hike Fira → Oia Santorini"
+          },
+          {
+            "title": "Atardecer en Oia",
+            "category": "imperdible",
+            "duration": "1.5h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Atardecer en Oia Santorini"
+          }
+        ]
+      },
+      {
+        "dateLabel": "9 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Ferry Santorini → Heraklion",
+            "category": "logistica_critica",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 3,
+            "walkable": false,
+            "mapQuery": "Ferry Santorini → Heraklion Santorini"
+          },
+          {
+            "title": "Alquiler auto en Heraklion",
+            "category": "logistica_critica",
+            "duration": "1h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 1,
+            "walkable": false,
+            "mapQuery": "Alquiler auto en Heraklion Santorini"
+          },
+          {
+            "title": "Conducción hacia Chania/Kissamos",
+            "category": "logistica_critica",
+            "duration": "2.5h",
+            "effortLevel": "medium",
+            "requiresTickets": false,
+            "visualImpactScore": 3,
+            "walkable": false,
+            "mapQuery": "Conducción hacia Chania/Kissamos Santorini"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Creta (Chania)",
+    "arrivalType": "late_arrival",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "10 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Playa Elafonissi (arena rosada)",
+            "category": "imperdible",
+            "duration": "5h",
+            "effortLevel": "medium",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Playa Elafonissi (arena rosada) Creta (Chania)"
+          },
+          {
+            "title": "Puerto Veneciano de Chania (noche)",
+            "category": "experiencia_local",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Puerto Veneciano de Chania (noche) Creta (Chania)"
+          }
+        ]
+      },
+      {
+        "dateLabel": "11 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Regreso a Heraklion + devolución auto",
+            "category": "logistica_critica",
+            "duration": "3h",
+            "effortLevel": "medium",
+            "requiresTickets": false,
+            "visualImpactScore": 2,
+            "walkable": false,
+            "mapQuery": "Regreso a Heraklion + devolución auto Creta (Chania)"
+          },
+          {
+            "title": "Vuelo Heraklion → Florencia",
+            "category": "logistica_critica",
+            "duration": "3h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 2,
+            "walkable": false,
+            "mapQuery": "Vuelo Heraklion → Florencia Creta (Chania)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Florencia",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "12 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Duomo + Cúpula",
+            "category": "imperdible",
+            "duration": "2h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Duomo + Cúpula Florencia"
+          },
+          {
+            "title": "Piazzale Michelangelo (sunset)",
+            "category": "imperdible",
+            "duration": "1.5h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": false,
+            "mapQuery": "Piazzale Michelangelo (sunset) Florencia"
+          }
+        ]
+      },
+      {
+        "dateLabel": "13 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Galería Uffizi",
+            "category": "muy_recomendado",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Galería Uffizi Florencia"
+          },
+          {
+            "title": "Barrio Oltrarno (tarde libre)",
+            "category": "experiencia_local",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Barrio Oltrarno (tarde libre) Florencia"
+          }
+        ]
+      },
+      {
+        "dateLabel": "14 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Tren Florencia → Sorrento",
+            "category": "logistica_critica",
+            "duration": "4h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 2,
+            "walkable": false,
+            "mapQuery": "Tren Florencia → Sorrento Florencia"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Sorrento",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "15 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Excursión a Capri",
+            "category": "imperdible",
+            "duration": "6h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Excursión a Capri Sorrento"
+          }
+        ]
+      },
+      {
+        "dateLabel": "16 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Pompeya",
+            "category": "imperdible",
+            "duration": "4h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Pompeya Sorrento"
+          }
+        ]
+      },
+      {
+        "dateLabel": "20 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Traslado a Amalfi",
+            "category": "logistica_critica",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 3,
+            "walkable": false,
+            "mapQuery": "Traslado a Amalfi Sorrento"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Amalfi",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "21 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Path of the Gods",
+            "category": "imperdible",
+            "duration": "4h",
+            "effortLevel": "high",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Path of the Gods Amalfi"
+          },
+          {
+            "title": "Ravello (villas y miradores)",
+            "category": "muy_recomendado",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Ravello (villas y miradores) Amalfi"
+          }
+        ]
+      },
+      {
+        "dateLabel": "22 abril",
+        "availability": "afternoon_only",
+        "blocks": [
+          {
+            "title": "Traslado Amalfi → Roma",
+            "category": "logistica_critica",
+            "duration": "3h",
+            "effortLevel": "low",
+            "requiresTickets": true,
+            "visualImpactScore": 2,
+            "walkable": false,
+            "mapQuery": "Traslado Amalfi → Roma Amalfi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "destination": "Roma",
+    "arrivalType": "afternoon_only",
+    "energyLevel": "medium",
+    "days": [
+      {
+        "dateLabel": "23 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Coliseo + Foro + Palatino",
+            "category": "imperdible",
+            "duration": "4h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Coliseo + Foro + Palatino Roma"
+          }
+        ]
+      },
+      {
+        "dateLabel": "24 abril",
+        "availability": "full_day",
+        "blocks": [
+          {
+            "title": "Museos Vaticanos + Capilla Sixtina",
+            "category": "imperdible",
+            "duration": "3h",
+            "effortLevel": "medium",
+            "requiresTickets": true,
+            "visualImpactScore": 5,
+            "walkable": true,
+            "mapQuery": "Museos Vaticanos + Capilla Sixtina Roma"
+          },
+          {
+            "title": "Trastevere (cierre del viaje)",
+            "category": "experiencia_local",
+            "duration": "2h",
+            "effortLevel": "low",
+            "requiresTickets": false,
+            "visualImpactScore": 4,
+            "walkable": true,
+            "mapQuery": "Trastevere (cierre del viaje) Roma"
+          }
+        ]
+      }
+    ]
+  }
+]
