@@ -3,7 +3,8 @@
 import { CityImage } from '@/lib/types';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 type ImageLightboxModalProps = {
   image: CityImage | null;
@@ -12,6 +13,12 @@ type ImageLightboxModalProps = {
 
 export default function ImageLightboxModal({ image, onClose }: ImageLightboxModalProps) {
   const reduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
 
   useEffect(() => {
     if (!image) return;
@@ -33,7 +40,9 @@ export default function ImageLightboxModal({ image, onClose }: ImageLightboxModa
     };
   }, [image, onClose]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {image && (
         <motion.div
@@ -81,5 +90,7 @@ export default function ImageLightboxModal({ image, onClose }: ImageLightboxModa
         </motion.div>
       )}
     </AnimatePresence>
+    ,
+    document.body
   );
 }
